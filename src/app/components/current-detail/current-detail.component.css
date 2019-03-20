@@ -1,0 +1,48 @@
+* {
+  font-family: 'Margarine', cursive;
+}
+
+.bottomDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.humidityWind {
+  margin: 20px;
+}
+
+p{
+  margin: 0;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.temps {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 575px) {
+  .temps {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 574px) {
+  .insideWeatherC{
+     flex-direction: column-reverse;
+   }
+}
+
+

@@ -1,0 +1,29 @@
+.wrap {
+  margin-top: 100px;
+}
+.searchBox {
+  margin: 0 auto;
+  width: 45%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+label {
+  margin: 0;
+}
+
+.weather-card {
+  margin-top: 50px;
+  border-radius: 0;
+  height: 200px;
+}
+
+.date {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+

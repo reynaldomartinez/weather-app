@@ -1,0 +1,17 @@
+
+<div class="container wrap">
+  <div >
+    <h1 class="date">Today is {{ date | date }}</h1>
+  </div>
+  <div class="card searchBox shadow-sm">
+      <label class="mb-1">
+        Enter City:
+      </label>
+        <input type="text" [(ngModel)]="cityName" name="cityName">
+    <button class="btn btn-primary" (click)="searchCity(cityName)">Search</button>
+  </div>
+
+  <div class="weather-card card shadow" *ngIf="displayCard">
+    <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [type]="type"></app-current-detail>
+  </div>
+</div>
