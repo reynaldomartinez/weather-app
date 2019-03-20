@@ -12,7 +12,7 @@ export class CurrentComponent implements OnInit {
   humidity: number;
   wind: number;
   temp: number;
-  type;
+  weatherCondition;
   date = new Date();
   displayCard = false;
   constructor(private weatherService: WeatherService) { }
@@ -27,7 +27,7 @@ export class CurrentComponent implements OnInit {
       this.humidity = data.main.humidity;
       this.wind = data.wind.speed;
       this.temp = data.main.temp;
-      this.type = data.weather[0].main;
+      this.weatherCondition = data.weather[0].main;
 
       this.humidity = Math.round(this.humidity);
       this.wind = Math.round(this.wind);

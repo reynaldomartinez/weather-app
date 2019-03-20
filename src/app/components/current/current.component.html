@@ -7,11 +7,11 @@
       <label class="mb-1">
         Enter City:
       </label>
-        <input type="text" [(ngModel)]="cityName" name="cityName">
+        <input type="text" [(ngModel)]="cityName" name="cityName" class="form-control">
     <button class="btn btn-primary" (click)="searchCity(cityName)">Search</button>
   </div>
 
   <div class="weather-card card shadow" *ngIf="displayCard">
-    <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [type]="type"></app-current-detail>
+    <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [weatherCondition]="weatherCondition"></app-current-detail>
   </div>
 </div>

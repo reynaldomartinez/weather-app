@@ -1,5 +1,6 @@
 * {
-  font-family: 'Margarine', cursive;
+  font-family: 'Montserrat', sans-serif;
+  color: #00FF80;
 }
 
 .bottomDetails {
@@ -31,6 +32,16 @@ h1{
   justify-content: center;
 }
 
+s {
+  text-decoration: none;
+}
+
+.weather-container {
+  background: url("/assets/clouds.jpeg") no-repeat center;
+  background-size: cover;
+  padding: 20px;
+}
+
 @media only screen and (min-width: 575px) {
   .temps {
     display: flex;
@@ -38,11 +49,18 @@ h1{
     flex-direction: column;
     padding-bottom: 25px;
   }
+  .name p{
+    font-size: 5.3em;
+  }
 }
 @media only screen and (max-width: 574px) {
   .insideWeatherC{
      flex-direction: column-reverse;
    }
+  .temperature {
+
+  }
+
 }
 
 
