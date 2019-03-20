@@ -1,4 +1,9 @@
-<div class="weather-container">
+<div [ngClass]="{
+                  'weather-condition-clear' : weatherCondition == 'Clear',
+                  'weather-condition-clouds' : weatherCondition == 'Clouds',
+                  'weather-condition-fog' : weatherCondition == 'Foggy',
+                  'weather-condition-rain' : weatherCondition == 'Rain'
+                }">
   <div class="row insideWeatherC">
     <div class="temps col-sm-6 col-md-4 col-lg-4g">
       <div class="temps">
