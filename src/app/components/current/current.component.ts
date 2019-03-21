@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
+import {catchError} from 'rxjs/operators';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-current',
@@ -15,6 +17,9 @@ export class CurrentComponent implements OnInit {
   weatherCondition;
   date = new Date();
   displayCard = false;
+  buttonCondition = true;
+  badRequest = true;
+  errorMessage;
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
@@ -34,6 +39,10 @@ export class CurrentComponent implements OnInit {
       this.temp = Math.round(this.temp);
       console.log(data);
       this.displayCard = true;
+    }, error => {
+      this.errorMessage = error.error.message;
+      // console.log(error);
+      console.log(this.errorMessage);
     });
   }
 

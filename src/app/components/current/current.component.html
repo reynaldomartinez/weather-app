@@ -8,7 +8,7 @@
         Enter City:
       </label>
         <input type="text" [(ngModel)]="cityName" name="cityName" class="form-control">
-    <button class="btn btn-primary" (click)="searchCity(cityName)">Search</button>
+    <button class="btn btn-primary" (click)="searchCity(cityName)" [disabled]="cityName.length < 3">Search</button>
   </div>
 
   <div class="weather-card card shadow" *ngIf="displayCard">

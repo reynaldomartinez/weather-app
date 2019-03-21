@@ -36,7 +36,6 @@ s {
   text-decoration: none;
 }
 
-
 .weather-condition-clear {
   background: url("/assets/clear.jpeg") no-repeat center;
   background-size: cover;
