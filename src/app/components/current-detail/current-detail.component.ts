@@ -11,6 +11,7 @@ export class CurrentDetailComponent implements OnInit {
   @Input() humidity: number;
   @Input() wind: number;
   @Input() weatherCondition;
+  @Input() iconImageURL;
   constructor() { }
 
   ngOnInit() {

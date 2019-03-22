@@ -20,6 +20,9 @@ export class CurrentComponent implements OnInit {
   buttonCondition = true;
   badRequest = true;
   errorMessage;
+  iconImageURL;
+  pngIcon;
+  imageURL = `http://openweathermap.org/img/w/`;
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
@@ -38,6 +41,13 @@ export class CurrentComponent implements OnInit {
       this.wind = Math.round(this.wind);
       this.temp = Math.round(this.temp);
       console.log(data);
+      // png image
+      console.log(data.weather[0].icon);
+      this.pngIcon = data.weather[0].icon;
+      this.iconImageURL = `${this.imageURL}/${this.pngIcon}.png`;
+      console.log(this.iconImageURL);
+      // description
+      console.log(data.main.temp);
       this.displayCard = true;
     }, error => {
       this.errorMessage = error.error.message;
