@@ -57,11 +57,14 @@ s {
   padding: 20px;
   color: #fff;
 }
-
-
-
-
-
+.weather-condition-snow{
+  background: url("/assets/snow.jpeg") no-repeat center;
+  background-size: cover;
+  padding: 20px;
+}
+.insideWeatherC {
+  color: #0AE176;
+}
 
 @media only screen and (min-width: 575px) {
   .temps {
@@ -77,6 +80,7 @@ s {
 @media only screen and (min-width: 575px) and (max-width: 768px){
   .name {
     font-size: 10px;
+    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 574px) {
@@ -87,6 +91,11 @@ s {
 
   }
 
+}
+@media only screen and (min-width: 769px) {
+  .name {
+    margin-top: 10px;
+  }
 }
 
 

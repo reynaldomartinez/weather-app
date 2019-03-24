@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherService {
-
+  apiKey = 'a42f9700e01d8e8d5ad400e1b060e4d4';
   constructor(private http: HttpClient) { }
   getCurrentWeather(cityName): Observable<any> {
     console.log(cityName);
