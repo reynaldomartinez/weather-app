@@ -9,6 +9,7 @@ import { ForecastComponent } from './components/forecast/forecast.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrentDetailComponent } from './components/current-detail/current-detail.component';
+import { FiveDayComponent } from './components/five-day/five-day.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CurrentDetailComponent } from './components/current-detail/current-deta
     CurrentComponent,
     ForecastComponent,
     CurrentDetailComponent,
+    FiveDayComponent,
   ],
   imports: [
     BrowserModule,

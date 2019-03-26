@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
-import {catchError} from 'rxjs/operators';
-import {HttpErrorResponse} from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-current',
@@ -17,13 +16,12 @@ export class CurrentComponent implements OnInit {
   weatherCondition;
   date = new Date();
   displayCard = false;
-  buttonCondition = true;
-  badRequest = true;
-  errorMessage;
   iconImageURL;
   pngIcon;
   imageURL = `http://openweathermap.org/img/w/`;
-  constructor(private weatherService: WeatherService) { }
+  errorMessage;
+  showError = false;
+  constructor(private weatherService: WeatherService, private route: Router) { }
 
   ngOnInit() {
   }
@@ -50,10 +48,10 @@ export class CurrentComponent implements OnInit {
       console.log(data.main.temp);
       this.displayCard = true;
     }, error => {
-      this.errorMessage = error.error.message;
-      // console.log(error);
-      console.log(this.errorMessage);
+      // console.log(error.error.message);
+        this.errorMessage = 'Sorry, ' +  error.error.message + '. Try a new city.';
+        console.log('There is an error');
+        console.log(this.errorMessage);
     });
   }
-
 }

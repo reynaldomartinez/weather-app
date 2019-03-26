@@ -11,13 +11,17 @@
       <input type="text" id="cityName" name="cityName" class="form-control"
              [(ngModel)]="cityName" #cityNamee required>
       <!-- cityName.length < 1-->
-      <button class="btn btn-primary" [disabled]="!cityForm.form.valid">Search</button>
+      <button class="btn btn-primary" [disabled]="cityForm.form.invalid">Search</button>
     </form>
   </div>
 
   <p style="color: #e4323a; background: #fff;" class="text-center mt-1">{{ cityNamee.className}}</p>
 
   <div class="weather-card card shadow" *ngIf="displayCard">
-    <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [weatherCondition]="weatherCondition" [iconImageURL]="iconImageURL"></app-current-detail>
+    <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [weatherCondition]="weatherCondition" [iconImageURL]="iconImageURL" [errorMessage]="errorMessage"></app-current-detail>
   </div>
 </div>
+
+<!--<div class="alert alert-danger text-center" *ngIf="errorMessage">-->
+  <!--<p>{{ errorMessage }}</p>-->
+<!--</div>-->

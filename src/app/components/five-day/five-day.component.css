@@ -1,0 +1,13 @@
+.five-day-container {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.ulInfo {
+  text-decoration: none !important;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
