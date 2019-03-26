@@ -6,9 +6,12 @@
 
 /*}*/
 
-body {
-  background: url("src/assets/bg.jpeg") no-repeat center right fixed;
-  background-size: cover;
-  overflow: hidden;
+/*html {*/
+  /*background: #39afff no-repeat center right fixed;*/
+  /*background-size: cover;*/
+  /*overflow: hidden;*/
 
+/*}*/
+body{
+  background: transparent !important;
 }

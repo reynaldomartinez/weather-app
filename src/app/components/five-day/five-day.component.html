@@ -11,8 +11,9 @@
       <h3>{{x.date | date}}</h3>
     </div>
     <div class="card-body d-flex flex-column align-items-center">
-      <div class="weather-icons">
+      <div class="weather-icons text-center">
         <img src="http://openweathermap.org/img/w/{{x.icon}}.png" alt="weather icons" class="icon-png">
+        <p><small>{{x.description}}</small></p>
       </div>
 
       <ul class="ulInfo d-flex flex-column">

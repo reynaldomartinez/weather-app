@@ -12,9 +12,7 @@ export class FiveDayComponent implements OnInit {
   forecast = [];
   date;
   weekDayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  imageURL = `http://openweathermap.org/img/w/`;
-  iconImageURL;
-  pngIcon;
+  weatherDescription;
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
@@ -29,7 +27,8 @@ export class FiveDayComponent implements OnInit {
           maxTemp: data.list[i].main.temp_max,
           minTemp: data.list[i].main.temp_min,
           date: data.list[i].dt_txt,
-          icon: data.list[i].weather[0].icon
+          icon: data.list[i].weather[0].icon,
+          description: data.list[i].weather[0].description
         };
         this.forecast.push(this.cityInfo);
         // this.date = data.list[i].dt_txt;
