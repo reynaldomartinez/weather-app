@@ -1,6 +1,5 @@
 * {
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .bottomDetails {
@@ -41,27 +40,32 @@ s {
   background-size: cover;
   padding: 20px;
 }
+
 .weather-condition-clouds{
   background: url("/assets/clouds.jpeg") no-repeat center;
   background-size: cover;
   padding: 20px;
 }
+
 .weather-condition-fog {
   background: url("/assets/fog.jpeg") no-repeat center;
   background-size: cover;
   padding: 20px;
 }
+
 .weather-condition-rain {
   background: url("/assets/rain.jpeg") no-repeat center;
   background-size: cover;
   padding: 20px;
   color: #fff;
 }
+
 .weather-condition-snow{
   background: url("/assets/snow.jpeg") no-repeat center;
   background-size: cover;
   padding: 20px;
 }
+
 .insideWeatherC {
   color: #0AE176;
 }
@@ -77,25 +81,22 @@ s {
     font-size: 5.3em;
   }
 }
+
 @media only screen and (min-width: 575px) and (max-width: 768px){
   .name {
     font-size: 10px;
     margin-top: 40px;
   }
 }
+
 @media only screen and (max-width: 574px) {
   .insideWeatherC{
      flex-direction: column-reverse;
    }
-  .temperature {
-
-  }
-
 }
+
 @media only screen and (min-width: 769px) {
   .name {
     margin-top: 10px;
   }
 }
-
-

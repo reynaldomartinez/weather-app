@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CurrentComponent } from './components/current/current.component';
-import { ForecastComponent } from './components/forecast/forecast.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrentDetailComponent } from './components/current-detail/current-detail.component';
@@ -16,7 +15,6 @@ import { FiveDayComponent } from './components/five-day/five-day.component';
     AppComponent,
     HeaderComponent,
     CurrentComponent,
-    ForecastComponent,
     CurrentDetailComponent,
     FiveDayComponent,
   ],

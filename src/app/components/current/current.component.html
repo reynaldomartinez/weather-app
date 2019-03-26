@@ -1,27 +1,21 @@
 
 <div class="container wrap">
-  <div >
-    <h1 class="date">Today is {{ date | date }}</h1>
-  </div>
-  <div class="card searchBox shadow-sm">
-    <form #cityForm="ngForm" (ngSubmit)="searchCity(cityName); cityForm.resetForm()">
-      <label class="mb-1">
-        Enter City:
-      </label>
-      <input type="text" id="cityName" name="cityName" class="form-control"
-             [(ngModel)]="cityName" #cityNamee required>
-      <!-- cityName.length < 1-->
-      <button class="btn btn-primary" [disabled]="cityForm.form.invalid">Search</button>
-    </form>
-  </div>
+    <div>
+      <form #cityForm="ngForm" (ngSubmit)="searchCity(cityName); cityForm.resetForm()" class="form-group">
+        <input type="text" id="cityName" name="cityName" class="form-control" placeholder="City Name"
+               [(ngModel)]="cityName" #cityNamee required>
+        <!-- cityName.length < 1-->
+        <button class="btn btn-primary btn-block mt-1" [disabled]="cityForm.form.invalid">Search</button>
+      </form>
+    </div>
+  <!--<p style="color: #e4323a; background: #fff;" class="text-center mt-1">{{ cityNamee.className}}</p>-->
+</div>
 
-  <p style="color: #e4323a; background: #fff;" class="text-center mt-1">{{ cityNamee.className}}</p>
-
+<div class="row justify-content-center">
   <div class="weather-card card shadow" *ngIf="displayCard">
     <app-current-detail [name]="name" [humidity]="humidity" [temp]="temp" [wind]="wind" [weatherCondition]="weatherCondition" [iconImageURL]="iconImageURL" [errorMessage]="errorMessage"></app-current-detail>
   </div>
 </div>
-
 <!--<div class="alert alert-danger text-center" *ngIf="errorMessage">-->
   <!--<p>{{ errorMessage }}</p>-->
 <!--</div>-->

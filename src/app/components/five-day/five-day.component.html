@@ -1,7 +1,8 @@
 <div class="container five-day-container">
-  <form class="form-group bg" (ngSubmit)="searchCity(cityName)">
-    <input type="text" class="form-control" placeholder="City Name" name="cityName" [(ngModel)]="cityName">
-    <button class="btn btn-primary btn-block mt-1">Search</button>
+  <form class="form-group bg" #cityForm="ngForm" (ngSubmit)="searchCity(cityName)">
+    <input type="text" class="form-control" placeholder="City Name" name="cityName"
+           [(ngModel)]="cityName" required>
+    <button class="btn btn-primary btn-block mt-1" [disabled]="cityForm.form.invalid">Search</button>
   </form>
 </div>
 
@@ -15,7 +16,6 @@
         <img src="http://openweathermap.org/img/w/{{x.icon}}.png" alt="weather icons" class="icon-png">
         <p><small>{{x.description}}</small></p>
       </div>
-
       <ul class="ulInfo d-flex flex-column">
         <li><i class="fas fa-plus"></i> Max Temp: {{x.maxTemp}}&deg;</li>
         <li><i class="fas fa-minus"></i> Min Temp: {{x.minTemp }}&deg;</li>

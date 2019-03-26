@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
+import { WeatherInfo } from '../../WeatherInfo';
 
 @Component({
   selector: 'app-five-day',
@@ -8,11 +9,10 @@ import { WeatherService } from '../../services/weather.service';
 })
 export class FiveDayComponent implements OnInit {
   cityName = '';
-  cityInfo;
+  cityInfo: WeatherInfo;
   forecast = [];
   date;
-  weekDayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  weatherDescription;
+  // weekDayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
@@ -20,7 +20,7 @@ export class FiveDayComponent implements OnInit {
   searchCity() {
     this.forecast.splice(0, this.forecast.length);
     this.weatherService.getFiveDayForecast(this.cityName).subscribe(data => {
-      console.log(data);
+      // console.log(data);
       for (let i = 0; i < data.list.length; i += 8) {
         // console.log(i);
         this.cityInfo = {
@@ -32,10 +32,10 @@ export class FiveDayComponent implements OnInit {
         };
         this.forecast.push(this.cityInfo);
         // this.date = data.list[i].dt_txt;
-        console.log(data.list[i].main.temp_max);
-        console.log(data.list[i].main.temp_min);
-        console.log(data.list[i].dt_txt);
-        console.log('CITYINFO:' + this.forecast);
+        // console.log(data.list[i].main.temp_max);
+        // console.log(data.list[i].main.temp_min);
+        // console.log(data.list[i].dt_txt);
+        // console.log('CITYINFO:' + this.forecast);
       }
     });
   }

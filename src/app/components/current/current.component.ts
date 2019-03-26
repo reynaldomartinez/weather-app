@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-current',
@@ -16,12 +15,11 @@ export class CurrentComponent implements OnInit {
   weatherCondition;
   date = new Date();
   displayCard = false;
+  imageURL = `http://openweathermap.org/img/w/`;
   iconImageURL;
   pngIcon;
-  imageURL = `http://openweathermap.org/img/w/`;
   errorMessage;
-  showError = false;
-  constructor(private weatherService: WeatherService, private route: Router) { }
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
   }
@@ -38,20 +36,21 @@ export class CurrentComponent implements OnInit {
       this.humidity = Math.round(this.humidity);
       this.wind = Math.round(this.wind);
       this.temp = Math.round(this.temp);
-      console.log(data);
-      // png image
-      console.log(data.weather[0].icon);
+      // console.log(data);
+      // // png image
+      // console.log(data.weather[0].icon);
       this.pngIcon = data.weather[0].icon;
       this.iconImageURL = `${this.imageURL}/${this.pngIcon}.png`;
-      console.log(this.iconImageURL);
+      // console.log(this.iconImageURL);
       // description
-      console.log(data.main.temp);
+      // console.log(data.main.temp);
       this.displayCard = true;
     }, error => {
       // console.log(error.error.message);
         this.errorMessage = 'Sorry, ' +  error.error.message + '. Try a new city.';
-        console.log('There is an error');
+        // console.log('There is an error');
         console.log(this.errorMessage);
+        alert(this.errorMessage);
     });
   }
 }

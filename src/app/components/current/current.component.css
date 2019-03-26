@@ -1,5 +1,7 @@
 .wrap {
-  margin-top: 100px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
 }
 .searchBox {
   margin: 0 auto;
@@ -37,6 +39,5 @@ label {
 
 @media only screen and (max-width: 574px) {
   .current {
-
   }
 }

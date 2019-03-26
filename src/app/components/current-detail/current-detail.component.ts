@@ -16,10 +16,10 @@ export class CurrentDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (this.weatherCondition === 'Clear') {
-      console.log('weather condition is: ', this.weatherCondition);
-    } else {
-      console.log('Weather is NOT CLEAR');
-    }
+    // if (this.weatherCondition === 'Clear') {
+    //   console.log('weather condition is: ', this.weatherCondition);
+    // } else {
+    //   console.log('Weather is NOT CLEAR');
+    // }
   }
 }
