@@ -20,6 +20,7 @@ export class FiveDayComponent implements OnInit {
   ngOnInit() {
   }
   searchCity() {
+    this.forecast.splice(0, this.forecast.length);
     this.weatherService.getFiveDayForecast(this.cityName).subscribe(data => {
       console.log(data);
       for (let i = 0; i < data.list.length; i += 8) {

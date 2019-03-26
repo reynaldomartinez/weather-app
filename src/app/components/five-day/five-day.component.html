@@ -12,13 +12,12 @@
     </div>
     <div class="card-body d-flex flex-column align-items-center">
       <div class="weather-icons">
-        <img src="http://openweathermap.org/img/w/{{x.icon}}.png" alt="weather icons">
+        <img src="http://openweathermap.org/img/w/{{x.icon}}.png" alt="weather icons" class="icon-png">
       </div>
 
       <ul class="ulInfo d-flex flex-column">
-        <li>Max Temp: {{x.maxTemp}}&deg;</li>
-        <li>Min Temp: {{x.minTemp }}&deg;</li>
-        <li>Min Temp: {{x.icon }}&deg;</li>
+        <li><i class="fas fa-plus"></i> Max Temp: {{x.maxTemp}}&deg;</li>
+        <li><i class="fas fa-minus"></i> Min Temp: {{x.minTemp }}&deg;</li>
       </ul>
     </div>
   </div>
