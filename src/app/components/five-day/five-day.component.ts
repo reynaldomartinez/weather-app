@@ -14,12 +14,12 @@ export class FiveDayComponent implements OnInit {
   date;
   // weekDayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   constructor(private weatherService: WeatherService) { }
-
+ k
   ngOnInit() {
   }
-  searchCity() {
+  searchCity(cityName) {
     this.forecast.splice(0, this.forecast.length);
-    this.weatherService.getFiveDayForecast(this.cityName).subscribe(data => {
+    this.weatherService.getFiveDayForecast(cityName).subscribe(data => {
       // console.log(data);
       for (let i = 0; i < data.list.length; i += 8) {
         // console.log(i);
