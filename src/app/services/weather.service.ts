@@ -10,7 +10,7 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
   getCurrentWeather(cityName): Observable<any> {
     // console.log(cityName);
-    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${this.apiKey}`);
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=${this.apiKey}`);
   }
 
   getFiveDayForecast(cityName): Observable<any> {
