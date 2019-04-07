@@ -1,6 +1,6 @@
 <div class="container five-day-container">
-  <h1>5-day Forecast: </h1>
   <form class="form-group bg" #cityForm="ngForm" (ngSubmit)="searchCity(cityName)">
+    <h1>5-day Forecast: </h1>
     <input type="text" class="form-control" placeholder="City Name" name="cityName"
            [(ngModel)]="cityName" required>
     <button class="btn btn-primary btn-block mt-1" [disabled]="cityForm.form.invalid">Search</button>
