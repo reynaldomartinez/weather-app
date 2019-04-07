@@ -8,6 +8,10 @@
   text-decoration: none !important;
 }
 
+h1 {
+  font-family: serif;
+}
+
 h3 {
   font-family: 'Open Sans', sans-serif;
 }
